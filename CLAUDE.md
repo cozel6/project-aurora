@@ -15,11 +15,21 @@
 
 Bachelor's thesis project, educational purpose, isolated lab.
 
+## Environments (critical)
+
+The same repo is cloned on all three machines; each runs **only its own part**:
+
+| Env | Role | Runs here |
+|---|---|---|
+| **PC** (Windows) | development + attacker + ML training | `attacker/`, `dashboard/`, `ml/train.py` |
+| **Mac** | development + attacker + ML training | `attacker/`, `dashboard/`, `ml/train.py` |
+| **Pi** (Raspberry Pi 4 Model B, **2 GB RAM**) | victim server + sensor + ML inference + response | `sensor/`, `ml/inference.py`, `response/`, `api/` |
+
+**Golden rule for the Pi (2 GB):** train on PC/Mac, export `.joblib`, copy it to the Pi — the Pi only
+does **inference**. **No TensorFlow/PyTorch on the Pi** (scikit-learn runtime + joblib + numpy only).
+
 ## Core rules
 
-- **Topology:** 3 machines from the same repo. **PC** and **Mac** = development + attacker + ML
-  training; **Raspberry Pi 4 (2 GB)** = victim server + sensor + inference + response.
-- **ML:** training only on PC/Mac; inference only on the Pi. **No TensorFlow/PyTorch on the Pi.**
 - **Git:** do not commit or push unless I explicitly ask.
 - **Attack:** attack code only against the lab Pi in the isolated lab (IP from `config/lab.yaml`).
 

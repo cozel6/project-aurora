@@ -21,7 +21,17 @@ pur educațional.
 
 > *Mai multe detalii se vor adăuga pe măsură ce proiectul avansează.*
 
+## Arhitectură
+
+Trei mașini folosesc același repo, fiecare rulând doar partea ei:
+
+- **PC / Mac** — dezvoltare, atacator și antrenarea modelelor ML.
+- **Raspberry Pi 4 (2 GB RAM)** — serverul victimă, senzorul de trafic, inferența ML și răspunsul automat.
+
+Modelele ML se antrenează pe PC/Mac și doar rulează (inferență) pe Pi — fără framework-uri ML grele pe Pi.
+
 ## Cuprins
 
 - [Descriere](#descriere)
-<!-- de completat pe parcurs: arhitectură, instalare, utilizare, etc. -->
+- [Arhitectură](#arhitectură)
+<!-- de completat pe parcurs: instalare, utilizare, etc. -->

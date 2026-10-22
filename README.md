@@ -22,7 +22,17 @@ educational.
 
 > *More details will be added as the project progresses.*
 
+## Architecture
+
+Three machines share the same repo, each running only its own part:
+
+- **PC / Mac** — development, attacker, and ML training.
+- **Raspberry Pi 4 (2 GB RAM)** — the victim server, traffic sensor, ML inference, and automated response.
+
+ML models are trained on PC/Mac and only run (inference) on the Pi — no heavy ML frameworks on the Pi.
+
 ## Table of contents
 
 - [Description](#description)
-<!-- to be filled in over time: architecture, setup, usage, etc. -->
+- [Architecture](#architecture)
+<!-- to be filled in over time: setup, usage, etc. -->
