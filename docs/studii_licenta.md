@@ -11,7 +11,7 @@ Legendă tip link:
 
 | Studiu | Link | Tip |
 |---|---|---|
-| A cost effective machine learning based network intrusion detection system using Raspberry Pi for real time analysis (PLOS ONE) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12747338/ | Pagină articol (PMC, acces liber) |
+| A cost effective machine learning based network intrusion detection system using Raspberry Pi for real time analysis (PLOS ONE) · [📄 rezumat](lecturi/ids_ml_raspberrypi_plosone2025.md) | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12747338/ | Pagină articol (PMC, acces liber) |
 | Adapting the IDS-ML Framework for Automated Attack Detection on Edge Devices (MDPI, Algorithms) | https://www.mdpi.com/1999-4893/19/5/417 | Pagină articol (acces liber) |
 | Energy-efficient deep learning-based intrusion detection system for edge computing: a novel DNN-KDQ model (Springer) | https://link.springer.com/article/10.1186/s13677-025-00762-9 | Pagină articol |
 | Edge-Detect: Edge-centric Network Intrusion Detection using Deep Neural Network (IEEE CCNC 2021, Singh et al.) | https://github.com/praneet195/Edge-Detect | Repo GitHub cu citare (lucrarea e în IEEE Xplore) |
