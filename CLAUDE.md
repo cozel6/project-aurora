@@ -25,8 +25,12 @@ The same repo is cloned on all three machines; each runs **only its own part**:
 | **Mac** | development + attacker + ML training | `attacker/`, `dashboard/`, `ml/train.py` |
 | **Pi** (Raspberry Pi 4 Model B, **2 GB RAM**) | victim server + sensor + ML inference + response | `sensor/`, `ml/inference.py`, `response/`, `api/` |
 
-**Golden rule for the Pi (2 GB):** train on PC/Mac, export `.joblib`, copy it to the Pi — the Pi only
-does **inference**. **No TensorFlow/PyTorch on the Pi** (scikit-learn runtime + joblib + numpy only).
+**Golden rule for the Pi (2 GB):** train on PC/Mac, export the model, copy it to the Pi — the Pi only
+does **inference**. **No full TensorFlow/PyTorch on the Pi.** Default = Random Forest `.joblib`
+(scikit-learn runtime + joblib + numpy). The chosen architecture is a **RF + LSTM hybrid**: the LSTM
+part may run on the Pi via **TF Lite runtime, inference only, with RAM/latency measured** (`psutil`).
+MVP (M1–M2) ships **RF-only**; the LSTM/TF Lite hybrid is added at **M3, measured**, with a documented
+**fallback to RF-only** if 2 GB can't take it. LSTM training always on PC/Mac.
 
 ## Core rules
 
